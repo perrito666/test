@@ -1,0 +1,5 @@
+{% load url from future %}
+<h1>{{ object.title }}</h1>
+<h3>{{ object.month }}/{{ object.day }}</h3>
+<a href="{% url 'wordcount' pk=object.pk %}">Get wordcount for this Devotional</a>
+<div>{{ object.get_body|safe }}</div>
